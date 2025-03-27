@@ -107,25 +107,21 @@
                 <div class="login">
                     <form>
                         <label for="chk" aria-hidden="true">Login</label>
-                        <input type="email" name="email" placeholder="Email" required="">
-                        <input type="password" name="pswd" placeholder="Password" required="">
-                        <button>Login</button>
+                        <input id="username" type="username" name="username" placeholder= 'Username' required="">
+                        <input id="password" type="password" name="pswd" placeholder="Password" required="">
+                        <button id = "login_button" onclick="handleLogin()">Login</button>
                     </form>
 
         <script>  
             function handleLogin(event) {  
-                event.preventDefault(); // Prevent the form from submitting the traditional way  
+                event.preventDefault();
                 
-                // Simple validation (You can add more complex checks here)  
-                // const username = document.getElementById('username').value;  
-                // const password = document.getElementById('password').value;  
-                const username = "NetWorkCo@gmail.com";
-                const password = "Hello"
+                const username = document.getElementById('username').value;  
+                const password = document.getElementById('password').value; 
+                const login =  document.getElementById('login_button').addEventListener('click');               
 
-                // For demonstration purposes, assume successful login if both fields are filled  
-                if (username && password) {  
-                    // Redirect to the main HTML page  
-                    window.location.href = 'index.html'; // Ensure you have this page created  
+                if (username && password && login ){  
+                    window.location.href = 'index.html';   
                 } else {  
                     alert('Please fill in both fields.');  
                 }  
