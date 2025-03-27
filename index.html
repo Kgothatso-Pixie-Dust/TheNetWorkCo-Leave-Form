@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheNetWorkCo: A member of the Takusani Group</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css"> 
+    <style>  
+        /* Custom CSS to increase checkbox size */  
+        .form-check {
+            display: flex;
+            align-items: right;
+            justify-content: center; /* Ensures label and checkbox are centered */
+            width: 100%;
+        }         
+        .form-check-label {  
+            margin-right: 50px; /* Space between checkbox and label */ 
+            align-items: right;             
+        }
+        .custom-background {  
+            background-color: #1e1e2f; /* Dark background */  
+            padding: 50px 0; /* Adjust as needed */  
+            position: relative;  
+        }      
+
+        .custom-background h1, .custom-background p {  
+            position: relative; /* Positioning for text */  
+            z-index: 1;  
+        } 
+        .checkbox-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the checkboxes */
+        }      
+
+        .form-check-input {
+            width: 20px;
+            height: 20px;
+            margin-right: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-background text-center text-white">         
+    <div class="container mt-5">  
+        <h2 class="text-center">Leave Application Form</h2> 
+    <form action="/save" method="post">
+        <div class = "form-group">
+            <label>Your Name:</label>
+            <input id = "name" name= "name" type="text" class="form-control" placeholder="Enter your full name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for = "intership-position">Internship Position</label>
+            <input id = "intership-position" name = "intership-position" type="text" class="form-control" placeholder= "Enter you Intership Position">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label">Company Name</label>
+            <input name = "company-name"  type="text" class="form-control" placeholder= "Enter you Company Name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label">Supervisor's Name:</label>
+            <input  name = "supervisor's-name" type="text" class="form-control" placeholder= "Enter you Supervisor's Name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for ="start-date" class="form-label">Leave Start Date:</label>
+            <input name="start-date" type="date" class="form-control" placeholder= "Enter you Date">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for ="end-date" class="form-label">Leave End Date:</label>
+            <input name="end-date" type="date" class="form-control" placeholder= "Enter you Date">
+        </div>
+        <div>
+            <fieldset class="form-group"> 
+            <legend>Reason for Leave:</legend>
+            <div class="form-check">  
+                <input class="form-check-input" id="academicCommitment" type="checkbox" name="academic-commitment" value="Academic Commitment">  
+                
+                <label class="form-check-label" for="academicCommitment">Academic Commitment</label>  
+            </div>  
+            <br>
+            <div class="form-check">  
+                <input class="form-check-input" id="personalReason" type="checkbox" name="personal-reason" value="Personal Reason">  
+                <label class="form-check-label" for="personalReason">Personal Reason</label>  
+            </div>  
+            <br>
+            <div class="form-check">  
+                <input class="form-check-input" id="medicalReason" type="checkbox" name="medical-reason" value="Medical Reason">  
+                <label class="form-check-label" for="medicalReason">Medical Reason (Attach Doctor's Note if Required)</label>  
+            </div> 
+            <br> 
+            <div class="form-check">  
+                <input class="form-check-input" id="otherReason" type="checkbox" name="other" value="">  
+                <label class="form-check-label" for="otherReason">Other (Please Specify):</label>  
+            </div> 
+            <br>
+            <textarea id="other" name="other" class="form-control" rows="3" placeholder="Enter your here..."></textarea>  
+ 
+        </fieldset>  
+        <div class="form-group"> 
+            <label for="handover-plan">Work Handover Plan (if applicable):</label><br>  
+            <textarea id="handover-plan" name="handover-plan"  class="form-control" rows="5" cols="100" size="30" placeholder="Enter your work handover details here..." required></textarea><br>  
+  
+        </div>
+        <button type="submit" style="font-size: 18px; padding: 15px 25px; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Saved</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-body">
+                    <p>New leave request created successfully.</p>
+                  </div>
+    </form>  
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.8.3/dist/umd/popper.min.js"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+
+</body>  
+
+</body>  
+</html>         
+
+    </form>
+</body>
+</html>
